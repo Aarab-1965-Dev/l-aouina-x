@@ -21,7 +21,7 @@
         }
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2.3rem;
         }
         header p {
             margin: 0.5rem 0 0 0;
@@ -35,9 +35,9 @@
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
         .card {
             background: white;
@@ -58,10 +58,22 @@
             background: #eef5f0;
             padding: 1rem;
             border-radius: 6px;
-            margin-bottom: 1.5rem;
             border-right: 4px solid #81b29a;
         }
-        /* تصميم أزرار شبكة القنوات الفضائية الذكية */
+        .flex-status {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        .status-box {
+            flex: 1;
+            min-width: 200px;
+            background: #f4f7f5;
+            border-right: 4px solid #2e6f40;
+            padding: 10px;
+            border-radius: 4px;
+        }
         .tv-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -111,7 +123,7 @@
         
         <div class="card">
             <h3>📊 توزيع الحصص والميثاق الداخلي للمنصة</h3>
-            <div class="grid" style="margin-top:0;">
+            <div class="grid" style="margin-top:0; margin-bottom: 1rem;">
                 <div class="shares-box">
                     <strong>25% الحصة التقنية:</strong> للمنفذ العام للتطوير الرقمي والبنية التحتية المستقلة.
                 </div>
@@ -122,24 +134,44 @@
             <p><strong>👥 الأعضاء المدرجون في الميثاق:</strong> بن عرب حليمة • بن عرب زكرياء • بن عرب لقصن • بن عرب عثمان</p>
         </div>
 
+        <div class="card" style="border-top: 4px solid #81b29a;">
+            <h3>🌱 لوحة التحكم الحية: الواحة الذكية والموارد المائية</h3>
+            <p>مؤشرات فحص المستشعرات الرقمية للمياه والتربة في أراضي الجماعة والقبيلة لـ LAAWAYNA-X:</p>
+            
+            <div class="flex-status">
+                <div class="status-box">
+                    <strong>🚰 منسوب مياه البئر الجوفية:</strong> 85% (مستقر)
+                </div>
+                <div class="status-box">
+                    <strong>💧 نظام الري بالتنقيط:</strong> مستقر ومؤتمت
+                </div>
+                <div class="status-box">
+                    <strong>🪴 رطوبة التربة العامة:</strong> 68% (مثالي)
+                </div>
+            </div>
+            
+            <h4>📋 تقرير حالة الغطاء النباتي والأشجار المثمرة الممتازة:</h4>
+            <ul style="padding-right: 20px; margin-top: 0;">
+                <li><strong>التين (الحمري والخضاري):</strong> حالة ممتازة - ري دوري منظم لتجهيز موسم الثمار</li>
+                <li><strong>الزيتون المحلي الأصيل:</strong> حالة ممتازة - التجهيز لموسم التسميد العضوي</li>
+                <li><strong>أشجار اللوز المحمية:</strong> مستقرة - تقليم دوري مكتمل بنجاح</li>
+                <li><strong>الحمضيات (الليمون والبرتقال):</strong> حالة جيدة - مراقبة دقيقة لرطوبة التربة المحيطة</li>
+            </ul>
+        </div>
+
         <div class="card">
             <h3>📺 مركز البث المباشر الفضائي والأرضي الهادف</h3>
-            <p>اضغط على أي قناة لفتح البث الحي والمباشر فوراً وبأعلى جودة وثبات:</p>
+            <p>اضغط على أي قناة لفتح البث الحي والمباشر فوراً وبأعلى جودة وثبات على يوتيوب أو تطبيق البث:</p>
             
             <div class="tv-grid">
                 <a class="btn-channel" href="https://www.youtube.com/c/SaudiQuranTv/live" target="_blank">🕋 القرآن الكريم مباشر</a>
                 <a class="btn-channel" href="https://www.youtube.com/c/SaudiSunnahTv/live" target="_blank">🕌 السنة النبوية مباشر</a>
                 <a class="btn-channel" href="https://www.youtube.com/@AssadissaTv/streams" target="_blank">📖 السادسة المغربية الدينية</a>
-
-                <a class="btn-channel" href="https://www.snrtlive.ma/al-aoula-live-بث-مباشر-الاولى" target="_blank">🇲🇦 القناة الأولى المغربية</a>
+                <a class="btn-channel" href="https://www.snrtlive.ma/al-aoula-live-%D8%A8%D8%AB-%D9%85%D8%A8%D8%A7%D8%B4%D8%B1-%D8%A7%D9%84%D8%A7%D9%88%D9%84%D9%8A" target="_blank">🇲🇦 القناة الأولى المغربية</a>
                 <a class="btn-channel" href="https://2m.ma/ar/live/" target="_blank">📺 القناة الثانية 2M مباشر</a>
                 <a class="btn-channel" href="https://www.youtube.com/@TamazightTvSnrt/streams" target="_blank">♓ الثامنة الأمازيغية المغربية</a>
-                <a class="btn-channel" href="https://www.youtube.com/@ArryadiaTVOfficial/streams" target="_blank">⚽ الرياضية المغربية</a>
-
                 <a class="btn-channel" href="https://www.youtube.com/@aljazeera/live" target="_blank">🌍 الجزيرة الإخبارية</a>
                 <a class="btn-channel" href="https://www.youtube.com/@AlJazeeraDocumentary/videos" target="_blank">🌱 الجزيرة الوثائقية</a>
-                <a class="btn-channel" href="https://www.youtube.com/@BBCNewsArabic/live" target="_blank">🇬🇧 بي بي سي عربي مباشر</a>
-                <a class="btn-channel" href="https://www.youtube.com/@AsharqNews/live" target="_blank">💼 الشرق للأخبار مباشر</a>
             </div>
         </div>
 
@@ -164,32 +196,6 @@
 
     </div>
 
-    
-        <div class="card" style="border-top: 4px solid #81b29a; background: #ffffff; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-            <h3 style="color: #2e6f40; margin-top: 0;">🌱 لوحة التحكم الحية: الواحة الذكية والموارد المائية</h3>
-            <p>مؤشرات فحص المستشعرات الرقمية للمياه والتربة في أراضي الجماعة والقبيلة لـ LAAWAYNA-X:</p>
-            
-            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px;">
-                <div style="flex: 1; min-width: 200px; background: #f4f7f5; border-right: 4px solid #2e6f40; padding: 10px; border-radius: 4px;">
-                    <strong>🚰 منسوب مياه البئر الجوفية:</strong> 85% (مستقر)
-                </div>
-                <div style="flex: 1; min-width: 200px; background: #f4f7f5; border-right: 4px solid #2e6f40; padding: 10px; border-radius: 4px;">
-                    <strong>💧 نظام الري بالتنقيط:</strong> مستقر ومؤتمت
-                </div>
-                <div style="flex: 1; min-width: 200px; background: #f4f7f5; border-right: 4px solid #2e6f40; padding: 10px; border-radius: 4px;">
-                    <strong>🪴 رطوبة التربة العامة:</strong> 68% (مثالي)
-                </div>
-            </div>
-            
-            <h4 style="color: #3d5a80; margin-bottom: 8px;">📋 تقرير حالة الغطاء النباتي والأشجار المثمرة الممتازة:</h4>
-            <ul style="padding-right: 20px; margin-top: 0;">
-                <li><strong>التين (الحمري والخضاري):</strong> حالة ممتازة - ري دوري منظم لتجهيز موسم الثمار</li>
-                <li><strong>الزيتون المحلي الأصيل:</strong> حالة ممتازة - التجهيز لموسم التسميد العضوي</li>
-                <li><strong>أشجار اللوز المحمية:</strong> مستقرة - تقليم دوري مكتمل بنجاح</li>
-                <li><strong>الحمضيات (الليمون والبرتقال):</strong> حالة جيدة - مراقبة دقيقة لرطوبة التربة المحيطة</li>
-            </ul>
-        </div>
-    
     <footer>
         <p>🔒 تم تأمين وتوثيق كافة الواجهات والأكواد برمجياً تحت نظام حماية الهوية الرقمية 1965</p>
     </footer>
