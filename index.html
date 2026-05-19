@@ -45,6 +45,7 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             border-top: 4px solid #2e6f40;
+            margin-bottom: 1.5rem;
         }
         .card h3 {
             margin-top: 0;
@@ -59,6 +60,40 @@
             border-radius: 6px;
             margin-bottom: 1.5rem;
             border-right: 4px solid #81b29a;
+        }
+        /* تصميم قسم البث المباشر للقنوات */
+        .tv-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .tv-selector {
+            padding: 0.8rem;
+            font-size: 1.1rem;
+            border-radius: 6px;
+            border: 2px solid #2e6f40;
+            background-color: white;
+            color: #2e6f40;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* نسبة 16:9 للشاشات */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
         footer {
             text-align: center;
@@ -92,31 +127,54 @@
             <p><strong>👥 الأعضاء المدرجون في الميثاق:</strong> بن عرب حليمة • بن عرب زكرياء • بن عرب لحسن • بن عرب عثمان</p>
         </div>
 
+        <div class="card">
+            <h3>📺 مركز البث المباشر العالمي والأرضي الهادف</h3>
+            <p>اختر القناة الفضائية أو الأرضية من القائمة المنسدلة للمشاهدة الحية والمباشرة:</p>
+            <div class="tv-container">
+                <select class="tv-selector" id="channelSelect" onchange="changeChannel()">
+                    <option value="https://www.youtube.com/embed/X7RhgS_N39c?autoplay=1">🕋 قناة القرآن الكريم مباشر - من مكة المكرمة</option>
+                    <option value="https://www.youtube.com/embed/6zGisH_t09w?autoplay=1">🕌 قناة السنة النبوية مباشر - من المدينة المنورة</option>
+                    <option value="https://www.youtube.com/embed/bNyUyrR0PHo?autoplay=1">🌍 قناة الجزيرة الإخبارية - بث حي</option>
+                    <option value="https://www.youtube.com/embed/a7Zdfm3hXSM?autoplay=1">🌱 قناة الجزيرة الوثائقية - محتوى معرفي</option>
+                    <option value="https://www.youtube.com/embed/UedVIdp7Xp8?autoplay=1">🇲🇦 القناة الثامنة الأمازيغية المغربية - أرضية وفضائية</option>
+                    <option value="https://www.youtube.com/embed/p1N2Vp6xW8E?autoplay=1">📖 القناة السادسة المغربية (محمد السادس للقرآن الكريم)</option>
+                    <option value="https://www.youtube.com/embed/w_M9fM_64_U?autoplay=1">📺 تلفزيون ج (الأطفال والتعليم الهادف)</option>
+                </select>
+
+                <div class="video-wrapper">
+                    <iframe id="tvPlayer" src="https://www.youtube.com/embed/X7RhgS_N39c" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
         <div class="grid">
-            
             <div class="card">
                 <h3>💻 مكتب التطوير والأمن الرقمي</h3>
                 <p>إدارة مستودعات GitHub برمجياً، ومراقبة بوابات الحماية وأنظمة التحقق عبر بيئة Termux المؤمنة.</p>
             </div>
-
             <div class="card">
                 <h3>🌱 مكتب الواحة الذكية والفلاحة</h3>
                 <p>الإشراف على إدارة الموارد المائية، وتطوير ممارسات تطعيم وزراعة الأشجار المثمرة المحلية لضمان الاستدامة.</p>
             </div>
-
             <div class="card">
                 <h3>📜 الإعلام وبنك المحتوى الإنساني</h3>
                 <p>إدارة المفكرة الذكية لتحليل ونشر بيانات السلام والتعايش، ومتابعة القضايا المدنية الميدانية الملحة كالقنطرة والمسالك.</p>
             </div>
-
             <div class="card">
                 <h3>🕌 نظام المواقيت والأذان العالمي</h3>
                 <p>تحديد دقيق لمواقيت الصلوات الخمس في جميع البقاع بناءً على الإحداثيات الجغرافية النشطة للموقع لربط البعد الروحي بالمنصة.</p>
             </div>
-
         </div>
 
     </div>
+
+    <script>
+        function changeChannel() {
+            var selector = document.getElementById("channelSelect");
+            var player = document.getElementById("tvPlayer");
+            player.src = selector.value;
+        }
+    </script>
 
     <footer>
         <p>🔒 تم تأمين وتوثيق كافة الواجهات والأكواد برمجياً تحت نظام حماية الهوية الرقمية 1965</p>
