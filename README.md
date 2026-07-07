@@ -1,1 +1,1 @@
-
+Super Intelligence for Peace 2026
